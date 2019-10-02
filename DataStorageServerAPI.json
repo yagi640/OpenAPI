@@ -1,0 +1,33 @@
+{
+    "openapi": "3.0.2",
+    "info": {
+        "title": "データ蓄積サーバAPI",
+        "version": "0.0.1"
+    },
+    "paths": {
+        "/post_ai_info": {
+            "put": {
+                "tags": ["AI"],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "properties": {
+                                        "provider": {"type": "string"},
+                                        "traffic": {"type": "integer"},
+                                        "bandwidth": {"type": "integer"}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {"description": "OK"}
+                }
+            }
+        }
+    }
+}
